@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			loggedIn: false,
 			demo: [
 				{
 					title: "FIRST",
