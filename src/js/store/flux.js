@@ -38,6 +38,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			setLoggedIn: loginForm => {
+				const store = getStore();
+				if (!loginForm) store.loggedIn = false;
+				else if (loginForm.email.length > 0 && loginForm.password.length > 0) {
+					store.loggedIn = true;
+				} else {
+					alert("Please Enter Email and Password");
+				}
 			}
 		}
 	};
